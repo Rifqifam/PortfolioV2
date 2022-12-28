@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Poppins", "Courier New", Courier, monospace;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 800;
+}
+
+h4,
+h5 {
+  font-weight: 600;
+}
+
+h1 {
+  @media only screen and (min-width: 980px) {
+    font-size: 62px;
+  }
+
+  @media only screen and (min-width: 560px) and (max-width: 980px) {
+    font-size: 52px;
+  }
+
+  @media only screen and (max-width: 560px) {
+    font-size: 42px;
+  }
+}
+
+h2,
+h3 {
+  @media only screen and (min-width: 980px) {
+    font-size: 52px;
+  }
+
+  @media only screen and (min-width: 560px) and (max-width: 980px) {
+    font-size: 42px;
+  }
+
+  @media only screen and (max-width: 560px) {
+    font-size: 32px;
+  }
+}
+
+h4,
+h5 {
+  @media only screen and (min-width: 980px) {
+    font-size: 42px;
+  }
+
+  @media only screen and (min-width: 560px) and (max-width: 980px) {
+    font-size: 32px;
+  }
+
+  @media only screen and (max-width: 560px) {
+    font-size: 22px;
+  }
+}
+
+p,
+a {
+  font-family: "Montserrat", "Times New Roman", Times, serif;
+  font-weight: 400;
+
+  @media only screen and (min-width: 980px) {
+    font-size: 15px;
+  }
+
+  @media only screen and (min-width: 560px) and (max-width: 980px) {
+    font-size: 14px;
+  }
+
+  @media only screen and (max-width: 560px) {
+    font-size: 13px;
+  }
+}

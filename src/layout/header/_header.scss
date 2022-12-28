@@ -1,0 +1,44 @@
+@use "../../styling/variables" as v;
+@import "./components/nav/nav";
+
+.header {
+  background: v.$bg-primary;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  color: white;
+
+  &_row {
+    display: flex;
+    justify-content: flex-start;
+    padding: 2rem 1rem !important;
+
+    @media only screen and (max-width: 980px) {
+      padding: 1rem 2rem !important;
+    }
+
+    &_leftcol {
+      width: 50%;
+
+      h2 {
+        font-weight: 600;
+        font-size: 32px;
+        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0);
+        cursor: pointer;
+        display: inline-block;
+
+        &:hover {
+          text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.26);
+        }
+      }
+    }
+
+    &_rightcol {
+      width: 50%;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      position: relative;
+    }
+  }
+}

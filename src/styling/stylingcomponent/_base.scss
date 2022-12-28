@@ -1,0 +1,36 @@
+@use "../variables" as v;
+
+:root {
+  width: 100vw;
+}
+
+body {
+  margin: 0px;
+  position: relative;
+  background: v.$bg-primary;
+  overflow-x: hidden;
+}
+
+.section {
+  min-width: 100vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+}
+
+.row {
+  width: 100vw;
+  max-width: 1140px;
+  min-height: 1px;
+  padding: 0.5rem 0.5rem;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}

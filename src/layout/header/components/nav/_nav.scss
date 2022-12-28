@@ -1,0 +1,125 @@
+@use "../../../../styling/variables" as v;
+
+.nav {
+  width: 100%;
+  height: fit-content;
+  margin: auto;
+  ul li {
+    list-style: none;
+  }
+  &_desktop {
+    position: relative;
+    @media only screen and (min-width: 980px) {
+      display: block;
+    }
+
+    @media only screen and (max-width: 979px) {
+      display: none;
+    }
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+      list-style: none;
+
+      & a {
+        color: v.$white;
+        text-decoration: none;
+        font-size: 18px;
+        background: v.$bg-primary;
+        position: relative;
+
+        &::after {
+          position: absolute;
+          content: "";
+          background: v.$white;
+          width: 10px;
+          height: 10px;
+          transform: translate(-50%, 0px);
+          left: 50%;
+          border-radius: 100%;
+          z-index: -1;
+          -webkit-transition: all 1s;
+          transition: all 1s;
+        }
+        &:hover {
+          text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.26);
+        }
+
+        &:hover::after {
+          transform: translate(-50%, 30px);
+          -webkit-transition: all 0.3;
+          transition: all 0.3s;
+        }
+      }
+    }
+  }
+  &_mobile {
+    position: relative;
+    @media only screen and (min-width: 980px) {
+      display: none;
+    }
+
+    @media only screen and (max-width: 979px) {
+      display: block;
+    }
+
+    &_ham {
+      text-align: right;
+      background-color: v.$bg-primary;
+
+      .menu-open {
+        transform: rotate(-180deg);
+      }
+
+      .menu-close {
+        transform: rotate(0deg);
+      }
+
+      svg {
+        color: v.$accent;
+        height: 45px;
+        width: 45px;
+        -webkit-transition: all 0.8;
+        transition: all 0.8s;
+      }
+    }
+
+    &_menu {
+      position: absolute;
+      right: 0px;
+      transition: all 0.6s ease-in;
+      -webkit-transition: all 0.6 ease-in;
+
+      &_close {
+        display: none;
+      }
+
+      &_item {
+        a {
+          color: transparent;
+          transition: all 0.6s ease;
+        }
+        &open {
+          color: v.$white !important;
+        }
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: right;
+        gap: 1rem;
+        margin-top: 2rem;
+
+        a {
+          color: v.$white;
+          text-decoration: none;
+          font-size: 20px;
+          background: v.$bg-primary;
+          position: relative;
+        }
+      }
+    }
+  }
+}
